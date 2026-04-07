@@ -5,8 +5,8 @@ def permutar(palavra):
     permutacoes = []
     for c, letra in enumerate(palavra):
         letra_fixa = letra
-        restante = palavra[:c] + palavra[c+1:] #### s[:i ] <<< pega todas as letras antes do índice i #### SEGUE A LÓGICA DO INTERVALO FECHADO ) 
-        #### s[i+1:] >>>> pega todas as strings depois do índice i  #### segue a lógica do intervalo aberto
+        restante = palavra[:c] + palavra[c+1:] #### s[:i ] <<< pega todas as letras antes do índice i #### SEGUE A LÓGICA DO INTERVALO aberto )
+        #### s[i+1:] >>>> pega todas as strings depois do índice i  #### segue a lógica do intervalo fechado [ 
  
         for p in permutar(restante):
             permutacoes.append(letra_fixa + p)
